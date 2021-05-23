@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="select-behavior.js" defer></script>
+  <script src="copy.js" defer></script>
+  <script src="generator.js" defer></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Password Generator</title>
+</head>
+<body>
+  <span>Password length</span>
+  <select name="password-length" id="passlength-select"></select><br>
+
+  <input type="button" value="Generate" onclick="generate()"/><br>
+
+  <br>
+
+  <input id="result" type="text" />
+  <span><button id="copy" onclick="copyToClipboard()">Copy</button></span>
+</body>
+</html>
