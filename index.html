@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <script src="generator.js" defer></script>
   <script src="copy.js" defer></script>
-
   <script src="function.js" defer></script>
-
   <link rel="stylesheet" href="style.css">
   <title>Password Generator</title>
 </head>
 <body>
+  <div>
+    <h2>Password Generator</h2>
+  </div>
+  
   <div id="password-length-box">
     <label>Password length: </label>
     <span id="password-length">4</span>
@@ -22,10 +24,34 @@
     </div>
   </div>
 
-  <input type="button" value="Generate" onclick="generate()"/><br><br>
+  <div id="character-select-box">
+    <label>Characters to use: </label>
 
-  <span>Password: </span>
-  <input id="result" type="text" />
-  <span><button id="copy" onclick="copyToClipboard()">Copy</button></span>
+    <label>
+      <input type="checkbox" name="character-select" value="lowercase" checked="checked">abc</input>
+    </label>
+    
+    <label>
+      <input type="checkbox" name="character-select" value="uppercase">ABC</input>
+    </label>
+    
+    <label>
+      <input type="checkbox" name="character-select" value="numbers">123</input>
+    </label>
+    
+    <label>
+      <input type="checkbox" name="character-select" value="symbols">!?#</input>
+    </label>
+  </div>
+
+  <div id="genarate-box">
+    <input type="button" value="Generate" onclick="generate()" /><br><br>
+  </div>
+  
+  <div id="result-box">
+    <span>Password: </span>
+    <input id="result" type="text" />
+    <span><button id="copy" onclick="copyToClipboard()">Copy</button></span>
+  </div>
 </body>
 </html>
